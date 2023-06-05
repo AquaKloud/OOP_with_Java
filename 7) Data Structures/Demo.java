@@ -1011,3 +1011,298 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
+
+// Step I
+
+package demo;
+public class Demo {
+    public static void main(String[] args) {
+        Queue q1=new Queue(5);
+        q1.enQueue(10); //s1.push(int)
+        q1.enQueue(20);
+        q1.enQueue(30);
+        q1.enQueue(40);
+        q1.enQueue(50);
+        q1.printQueue(); //[10,20,30,40,50];
+        
+        q1.deQueue(); //s1.pop()
+        q1.printQueue(); //[20,30,40,50];
+        
+        q1.deQueue();
+        q1.printQueue(); //[30,40,50];
+        
+        System.out.println("Capacity : "+q1.capacity()); //5
+        System.out.println("Size     : "+q1.size());//3
+        
+        q1.enQueue(60);
+        q1.enQueue(70);
+        q1.printQueue(); //[30,40,50,60,70];
+        System.out.println("Capacity : "+q1.capacity()); //5
+        System.out.println("Size     : "+q1.size());//5
+        
+        
+        q1.enQueue(80);
+        q1.printQueue(); //[30,40,50,60,70,80];
+        System.out.println("Capacity : "+q1.capacity()); //10
+        System.out.println("Size     : "+q1.size());//6
+
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+class Queue{
+    private int[] dataArray;
+    private int nextIndex;
+
+    public Queue(int capacity) {
+        dataArray=new int[capacity];
+        nextIndex=0;
+    }
+    public int size(){
+        return nextIndex;
+    }
+    public int capacity(){
+        return dataArray.length;
+    }
+    private boolean isFull(){
+        return size()==capacity();
+    }
+    private boolean isEmpty(){
+        return size()==0;
+    }
+    private void incrementArraySize(){
+        int[] temp=new int[dataArray.length*2];
+        for (int i = 0; i < dataArray.length; i++) {
+            temp[i]=dataArray[i];
+        }
+        dataArray=temp;
+    }
+    public void enQueue(int data){
+        if(isFull()){
+            incrementArraySize();
+        }
+        dataArray[nextIndex++]=data;
+    }
+    public void printQueue(){
+        System.out.print("[");
+        for (int i = 0; i < nextIndex; i++) {
+            System.out.print(dataArray[i]+", ");
+        }
+        System.out.println("\b\b]");
+    }
+    public void deQueue(){
+        if(!isEmpty()){
+            for (int i = 0; i < nextIndex-1 ; i++) {
+                dataArray[i]=dataArray[i+1];
+            }
+            nextIndex--;
+        }
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Queue q1=new Queue(5);
+        q1.enQueue(10);
+        q1.enQueue(20);
+        q1.enQueue(30);
+        q1.enQueue(40);
+        q1.enQueue(50);
+        q1.printQueue(); //[10,20,30,40,50];
+        
+        q1.deQueue();
+        q1.printQueue(); //[20,30,40,50];
+        
+        q1.deQueue();
+        q1.printQueue(); //[30,40,50];
+        
+        System.out.println("Capacity : "+q1.capacity()); //5
+        System.out.println("Size     : "+q1.size());//3
+        
+        q1.enQueue(60);
+        q1.enQueue(70);
+        q1.printQueue(); //[30,40,50,60,70];
+        System.out.println("Capacity : "+q1.capacity()); //5
+        System.out.println("Size     : "+q1.size());//5
+        
+        
+        q1.enQueue(80);
+        q1.printQueue(); //[30,40,50,60,70,80];
+        System.out.println("Capacity : "+q1.capacity()); //10
+        System.out.println("Size     : "+q1.size());//6
+
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////	
+	Class "List"
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+public class Demo {
+    public static void main(String[] args) {
+        List list=new List(10);
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+        list.printList(); //[10,20,30,40,50]
+        
+        list.remove(2); //public void remove(int index)
+        list.printList(); //[10,20,40,50]
+        
+        list.add(2,300);//public void remove(int index,int data)
+        list.printList(); //[10,20,300,40,50]
+        
+        list.add(6,111); //Runtime error=>Prints "out of bounds"
+        
+        list.set(2,500);
+        list.printList(); //[10,20,500,40,50]
+        
+        list.add(new int[]{1,2,3});
+        list.printList(); //[10,20,500,40,50,1,2,3]
+        
+        list.add(2,new int[]{100,200,300});
+        list.printList(); //[10,20,100,200,300,500,40,50,1,2,3]
+        
+        list.remove(2,5); //public void remove(int start, int end)
+        list.printList(); //[10,20,40,50,1,2,3]
+    }
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+class Customer{
+    int code;
+    String name;
+
+    public Customer(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+    public void printCustomer(){
+        System.out.println(code+" : "+name);
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Customer c1;
+        c1=new Customer(1001,"Danapala");
+        c1.printCustomer();
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+class Box{
+    int length;
+    Box box;
+    
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        Box b1=new Box();
+        b1.length=100;
+        b1.box=new Box();
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+class Customer{
+    int code;
+    String name;
+
+    public Customer(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+    public void printCustomer(){
+        System.out.println(code+" : "+name);
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Customer c1=new Customer(1001,"Danapala");
+        Customer c2=new Customer(1002,"Gunapala");
+        c1=c2;
+        c1.code=1111;
+        c2.printCustomer();
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+class Customer{
+    int code;
+    String name;
+    Customer next;
+
+    public Customer(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+    public void printCustomer(){
+        System.out.println(code+" : "+name);
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Customer c1=new Customer(1001,"Danapala");
+        Customer c2=new Customer(1002,"Gunapala");
+        Customer c3=new Customer(1003,"Somapala");
+        c1.next=c2;
+        c2.next=c3;
+        c3.next=c1;
+        
+        c1.next.next.printCustomer();
+        c2.next.next.printCustomer();
+        c3.next.printCustomer();
+        
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+package demo;
+
+class Customer {
+
+    int code;
+    String name;
+    Customer next;
+
+    public Customer(int code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    public void printCustomer() {
+        System.out.println(code + " : " + name);
+    }
+}
+
+public class Demo {
+
+    public static void main(String[] args) {
+        Customer c1 = new Customer(1001, "Danapala");
+        c1.next = new Customer(1002, "Gunapala");
+        c1.next.next = new Customer(1003, "Somapala");
+        c1.next.next.next = c1;
+        c1.printCustomer();
+        c1.next.printCustomer();
+        c1.next.next.printCustomer();
+        c1.next.next.next.next.printCustomer();
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
