@@ -1305,4 +1305,609 @@ public class Demo {
     }
 }
 
+
+//////////////////////////////////////////////////////////////////////////////////////
+	Linked List, Queue, Stack
+//////////////////////////////////////////////////////////////////////////////////////
+// Class "Stack"
+
+package demo;
+
+
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step I
+
+package demo;
+class Stack{
+    public void push(int data){
+        
+    }
+    public void pop(){
+        
+    }
+    public void printStack(){
+        
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step II
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        //
+    }
+    public void pop(){
+        //
+    }
+    public void printStack(){
+        //
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step III
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        //
+    }
+    public void printStack(){
+        //
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        s1.push(60);
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step IV
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        //
+    }
+    public void printStack(){
+        System.out.print("[");
+        while(top!=null){
+            System.out.print(top.data+", ");
+            top=top.next;
+        }
+        System.out.println("\b\b]");
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        s1.printStack(); //[50,40,30,20,10]
+        //s1.push(60);
+        //s1.pop();
+        //s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step V
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        //
+    }
+    public void printStack(){
+        System.out.print("[");
+        Node temp=top;
+        while(temp!=null){
+            System.out.print(temp.data+", ");
+            temp=temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        s1.printStack(); //[50,40,30,20,10]
+        //s1.push(60);
+        //s1.pop();
+        //s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step VI
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        if(top!=null){
+            top=top.next;
+        }
+    }
+    public void printStack(){
+        System.out.print("[");
+        Node temp=top;
+        while(temp!=null){
+            System.out.print(temp.data+", ");
+            temp=temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        s1.printStack(); //[50,40,30,20,10]
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step VII
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        if(top!=null){
+            top=top.next;
+        }
+    }
+    public void printStack(){
+        System.out.print("[");
+        Node temp=top;
+        while(temp!=null){
+            System.out.print(temp.data+", ");
+            temp=temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        System.out.println("Size : "+s1.size());//5
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+        System.out.println("Size : "+s1.size());//4
+        
+        s1.clear();
+        System.out.println("Size : "+s1.size());//0
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// From Q83
+
+package demo;
+class Stack{
+    Node top;
+    public void push(int data){
+        Node d1=new Node(data);
+        d1.next=top;
+        top=d1;
+    }
+    public void pop(){
+        if(top!=null){
+            top=top.next;
+        }
+    }
+    public void printStack(){
+        System.out.print("[");
+        Node temp=top;
+        while(temp!=null){
+            System.out.print(temp.data+", ");
+            temp=temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+    public int size(){
+        int count=0;
+        Node temp=top;
+        while(temp!=null){
+            count++;
+            temp=temp.next;
+        }
+        return count;
+    }
+    public void clear(){
+        top=null;
+    }
+}
+class Node{
+    int data;
+    Node next;
+    public Node(int data) {
+        this.data = data;
+    }
+    
+}
+public class Demo {
+    public static void main(String[] args) {
+        Stack s1=new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        System.out.println("Size : "+s1.size());//5
+        
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+        System.out.println("Size : "+s1.size());//4
+        
+        s1.clear();
+        System.out.println("Size : "+s1.size());//0
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step VIII (With Encapsulation)
+
+package demo;
+
+class Stack {
+
+    private Node top;
+
+    public void push(int data) {
+        Node d1 = new Node(data);
+        d1.next = top;
+        top = d1;
+    }
+
+    public void pop() {
+        if (top != null) {
+            top = top.next;
+        }
+    }
+
+    public void printStack() {
+        System.out.print("[");
+        Node temp = top;
+        while (temp != null) {
+            System.out.print(temp.data + ", ");
+            temp = temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+
+    public int size() {
+        int count = 0;
+        Node temp = top;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        return count;
+    }
+
+    public void clear() {
+        top = null;
+    }
+    //------start inner class Node-------------------------
+    class Node {
+
+        private int data;
+        private Node next;
+
+        public Node(int data) {
+            this.data = data;
+        }
+    }//------end inner class Node-------------------------
+    
+}//------end class Stack-----------------------------
+
+public class Demo {
+
+    public static void main(String[] args) {
+        Stack s1 = new Stack();
+        s1.push(10);
+        s1.push(20);
+        s1.push(30);
+        s1.push(40);
+        s1.push(50);
+        s1.printStack(); //[50,40,30,20,10]
+        System.out.println("Size : " + s1.size());//5
+
+        s1.pop();
+        s1.printStack(); //[40,30,20,10]
+        System.out.println("Size : " + s1.size());//4
+
+        s1.clear();
+        System.out.println("Size : " + s1.size());//0
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Class "Queue"
+
+package demo;
+
+public class Demo {
+    public static void main(String[] args) {
+        Queue q1=new Queue();
+        q1.enQueue(10);
+        q1.enQueue(20);
+        q1.enQueue(30);
+        q1.enQueue(40);
+        q1.enQueue(50);
+        q1.printQueue(); //[10,20,30,40,50]
+        
+        q1.deQueue();
+        q1.printQueue(); //[20,30,40,50]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step I
+
+package demo;
+class Queue{
+    private Node front;
+    
+    public void enQueue(int data){
+        
+    }
+    public void deQueue(){
+        
+    }
+    public void printQueue(){
+        
+    }
+    private class Node{
+        private int code;
+        private Node next;
+
+        public Node(int code) {
+            this.code = code;
+        }
+        
+    }
+}
+public class Demo {
+    public static void main(String[] args) {
+        Queue q1=new Queue();
+        q1.enQueue(10);
+        q1.enQueue(20);
+        q1.enQueue(30);
+        q1.enQueue(40);
+        q1.enQueue(50);
+        q1.printQueue(); //[10,20,30,40,50]
+        
+        q1.deQueue();
+        q1.printQueue(); //[20,30,40,50]
+    }
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+// Step II
+
+package demo;
+
+class Queue {
+
+    private Node front;
+
+    public void enQueue(int data) {
+        Node d1 = new Node(data);
+        if (front == null) {
+            front = d1;
+        } else {
+            Node temp = front;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = d1;
+
+        }
+    }
+
+    public void deQueue() {
+        if(front!=null){
+            front=front.next;
+        }
+    }
+
+    public void printQueue() {
+        System.out.print("[");
+        Node temp=front;
+        while(temp!=null){
+            System.out.print(temp.code+", ");
+            temp=temp.next;
+        }
+        System.out.println("\b\b]");
+    }
+
+    private class Node {
+
+        private int code;
+        private Node next;
+
+        public Node(int code) {
+            this.code = code;
+        }
+
+    }
+}
+
+public class Demo {
+
+    public static void main(String[] args) {
+        Queue q1 = new Queue();
+        q1.enQueue(10);
+        q1.enQueue(20);
+        q1.enQueue(30);
+        q1.enQueue(40);
+        q1.enQueue(50);
+        q1.printQueue(); //[10,20,30,40,50]
+
+        q1.deQueue();
+        q1.printQueue(); //[20,30,40,50]
+    }
+}
+
 //////////////////////////////////////////////////////////////////////////////////////
