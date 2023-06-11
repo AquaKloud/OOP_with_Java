@@ -19,7 +19,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q137
+
 package demo;
 class A{}
 class Customer extends A{ //compiler inserts "extends Object"
@@ -34,8 +34,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q138 Exercise
-=============
+
 package demo;
 class Customer { 
 
@@ -46,8 +45,7 @@ class Customer {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q139 Exercise
-============
+
 package demo;
 
 import javax.swing.JFrame;
@@ -68,8 +66,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q140 Exercise
-=============
+
 package demo;
 
 import javax.swing.JFrame;
@@ -87,8 +84,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q141 Method "public Class getClass()"
-=====================================
+// "public Class getClass()"
+
 package demo;
 class Customer { 
     int code;
@@ -110,8 +107,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q142 Method "public int hashCode()
-=================================
+// "public int hashCode()
+
 package demo;
 class Customer { 
     int code;
@@ -136,8 +133,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q143 Method "public String toString()"
-======================================
+// "public String toString()"
+
 package demo;
 class Customer { 
     int code;
@@ -166,7 +163,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q144
+
 package demo;
 class Customer { 
     int code;
@@ -192,8 +189,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q145 Exercise
-=============
+
+
 package demo;
 
 import java.util.ArrayList;
@@ -226,8 +223,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q146 From Q145
-==============
+
 package demo;
 
 import java.util.ArrayList;
@@ -266,8 +262,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q147 Method "public boolean equals(Object)"
-===========================================
+// Method "public boolean equals(Object)"
+
 package demo;
 
 class Customer { 
@@ -302,8 +298,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q148 Method "public boolean equals(Object)"
-===========================================
+// Method "public boolean equals(Object)"
+
 package demo;
 
 class Customer { 
@@ -339,8 +335,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q149 From Q148 - Overriding equals(Obj)
-======================================
+// Overriding equals(Obj)
+
 package demo;
 
 class Customer { 
@@ -384,8 +380,7 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q150 Exercise
-=============
+
 package demo;
 
 class Customer { 
@@ -430,8 +425,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-QQ151 From Q150 Using "instanceof"
-==================================
+// Using "instanceof"
+
 package demo;
 
 class Customer {
