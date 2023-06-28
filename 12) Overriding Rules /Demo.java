@@ -1,6 +1,6 @@
 //////////////////////////////////////////////////////////////////////////////////////
-Q152 Rule No.1  Static Methods (Case I)
-=====================================
+// Rule No.1  Static Methods (Case I)
+
 package demo;
 class Vehicle{
     void park(){
@@ -17,8 +17,8 @@ class Car extends Vehicle{
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q153 Rule No.1 Static Methods (Case II)
-======================================
+// Rule No.1 Static Methods (Case II)
+
 package demo;
 class Vehicle{
     static void park(){
@@ -35,8 +35,8 @@ class Car extends Vehicle{
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q154 Rule No.1 Static Methods (Case III)
-========================================
+// Rule No.1 Static Methods (Case III)
+
 package demo;
 class Vehicle{
     static void park(){
@@ -61,8 +61,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q155 Rule No. 2 private Methods
-===============================
+// Rule No. 2 private Methods
+
 package demo;
 class Vehicle{
     private void park(){
@@ -89,8 +89,8 @@ public class Demo {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q156 Rule No.3 Final Methods
-============================
+// Rule No.3 Final Methods
+
 package demo;
 class Vehicle{
     final void park(){
@@ -108,8 +108,8 @@ class Car extends Vehicle{
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q157 Exercise (Final Classes)
-=============================
+// Exercise (Final Classes)
+
 package demo;
 final class Vehicle{
     void park(){ //Implicitly final methods
@@ -122,8 +122,8 @@ class Car extends Vehicle{
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q158 Rule No. 4 (Weaker Access Privileges)
-==========================================
+// Rule No. 4 (Weaker Access Privileges)
+
 package demo;
 class Vehicle{
    protected void park(){
@@ -145,8 +145,8 @@ class Car extends Vehicle{
 //D.    private -->Illegal
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q159 Rule N0. 5 (Same return types)
-===================================
+// Rule N0. 5 (Same return types)
+
 package demo;
 
 class Vehicle {
@@ -172,8 +172,8 @@ class Car extends Vehicle {
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
-Q160 Rule No.5 (Covariant Since JDK1.5)
-======================================
+// Rule No.5 (Covariant Since JDK1.5)
+
 package demo;
 class Animal{}
 class Dog extends Animal{}
